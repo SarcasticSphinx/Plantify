@@ -1,0 +1,40 @@
+.options-container{
+    @apply flex flex-col items-center gap-8 rounded-lg;
+    padding: 4rem 12rem;
+    margin: 2rem 0;
+
+    background-color: #DCEAD0;
+}
+
+.Filtered-options-heading{
+    align-self: flex-start;
+    font-size: 36px;
+    text-align: center
+}
+.filtered-items{
+    @apply flex justify-around items-center
+    w-full gap-2;
+    flex-wrap: wrap;
+}
+.filtered-item{
+    @apply flex flex-col items-center gap-4;
+}
+.filtered-item .img{
+    @apply rounded-full hover:scale-110 hover:border-2;
+    width: 175px;
+    height: 175px;
+    overflow: hidden;
+    border: 4px solid var(--primary-color);
+    transition: all 0.2s ease-in-out;
+}
+.filtered-item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.filtered-item h3{
+    @apply text-center;
+    font-size: 1.2rem;
+}
+
+  

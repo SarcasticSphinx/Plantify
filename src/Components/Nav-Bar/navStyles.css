@@ -1,0 +1,180 @@
+:root{
+    --primary-color: #407B11;
+    --text-color: #000000;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+nav{
+    @apply flex justify-between items-center;
+    padding: .2em 10rem;
+    background-color: #E5F7D6;
+}
+.logo {
+    font-family: "Days One", sans-serif;
+    font-size: 64px;
+    color: var(--primary-color);
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+    .nav-options ul {
+        @apply flex justify-center items-center;
+    }
+    .nav-options ul {
+        @apply flex flex-row gap-8;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+  .nav-options li a {
+    @apply flex justify-center items-center gap-2 hover:text-[var(--primary-color)];
+    font-size: 20px;
+    font-weight: 600;
+    opacity: 60%;
+    transition: all 0.3s;
+    
+  }
+  .nav-options li a[href*="signUp"] {
+    @apply border-2 border-[var(--primary-color)] px-4 py-1 rounded-md hover:bg-[var(--primary-color)] hover:text-white;
+    transition: all 0.3s;
+  }
+
+  
+img[src*="user-guide"] {
+  width: 20px;
+  height: 20px;
+}
+img[src*="cart"] {
+    width: 26px;
+    height: 26px;
+}
+
+
+/* Login and signup */
+
+@keyframes modalFadeIn {
+  from {
+    scale: 0;
+    opacity: 0;
+  }
+  to {
+    scale: 1;
+    opacity: 1;
+  }
+}
+
+
+.login-container, .signup-container {
+  animation: modalFadeIn 0.5s ease-out;
+}
+.login-signup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.login-container, .signup-container {
+  background: #ECFBE0;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  position: relative;
+  width: 30rem;
+  max-width: 90%;
+}
+.close-btn {
+  position: absolute;
+  background-color: transparent;
+  font-size: 2rem;
+  border: none;
+  top: .5rem;
+  right: 1rem;
+}
+
+.login-container h1, .signup-container h1 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.login-container h1 span, .signup-container h1 span {
+  color: var(--primary-color);
+  font-family: 'days one', sans-serif;
+  font-size: larger;
+}
+
+.login-container input, .signup-container input {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid var(--primary-color);
+  border-radius: 4px;
+  transition: scale 0.3s;
+  outline: none;
+}
+.login-container input:focus, .signup-container input:focus{
+  border: 2px solid var(--primary-color);
+}
+.login-container input:active, .signup-container input:active{
+  scale: 1.05;
+}
+
+.log-in-btn, .sign-ip-btn {
+  background: var(--primary-color);
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  color: white;
+  margin-bottom: 1rem;
+  transition: all 0.3s;
+}
+.log-in-btn:hover, .sign-ip-btn:hover {
+  background: #2e5b0d;
+}
+.alternative-option{
+  margin-top: 1rem;
+  font-size: 1rem;
+  opacity: .6;
+}
+.alternative-option a{
+  color: var(--primary-color);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.alternative-option a:hover{
+  color: #000000;
+}
+
+.google-login-btn {
+  padding: 0.75rem 0; 
+  border-radius: 4px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  color: #757575;
+  border: 1px solid #ccc;
+  transition: all 0.3s;
+}
+
+.google-login-btn img {
+  width: 25px;
+  height: 25px;
+  margin-right: 0.5rem;
+}
+.google-login-btn:hover {
+  background: rgb(213, 240, 213);
+}
+

@@ -1,0 +1,74 @@
+:root{
+    --primary-color: #407B11;
+    --text-color: #000000;
+}
+.footer-container{
+    padding: 2rem 15rem;
+    background-color: #E0F1D1;
+    position: relative;
+
+}
+
+.logo {
+    font-family: "Days One", sans-serif;
+    font-size: 64px;
+    color: var(--primary-color);
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+.flag{
+    width: 32px;
+    height: 32px;
+}
+.region-language{
+    @apply flex gap-4;
+
+}
+.region, .language{
+    @apply flex items-center justify-center gap-1;
+    background-color: #D5ECC2;
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 10px 15px;
+
+}
+.our-informations{
+    @apply flex justify-between mt-8;
+}
+.our-info{
+    @apply flex flex-col;
+}
+.our-info h3{
+    @apply text-[25px] font-semibold;
+}
+.our-info a{
+    @apply text-[17px] text-gray-500;
+}
+.social-media-links{
+    width: 26px;
+    height: 26px;
+}
+.horizontal-divider{
+    width: 100%;
+    height: 1.5px;
+    background-color: var(--primary-color);
+    margin: 1.5rem 0;
+}
+
+.copyright{
+    @apply flex items-center justify-between;
+    font-size: 13px;
+    color: var(--text-color);
+}
+.top{
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    bottom: 2rem;
+    right: 5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.top:hover{
+    transform: scale(1.1);
+}

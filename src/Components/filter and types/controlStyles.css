@@ -1,0 +1,94 @@
+:root {
+    --button-color: #E2F7D0;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1.5rem;
+    margin-left: 20rem;
+}
+
+.controls-wrapper {
+    position: relative;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.controls button {
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    background-color: var(--button-color);
+    border: none;
+    font-size: 18px;
+    position: relative;
+}
+
+img[src*="filter"] {
+    width: 25px;
+    height: 25px;
+}
+
+.down-arrow {
+    width: 15px;
+    height: 15px;
+    transition: transform 0.3s ease;
+}
+
+.down-arrow.rotate {
+    transform: rotate(180deg);
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #E2F7D0;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    z-index: 10;
+    padding: 0.5rem;
+    min-width: 200px;
+    margin-top: 0.5rem;
+    animation: appear 0.3s ease-out;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.control-button{
+    position: relative;
+}
+
+.dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    border-radius: 0.375rem;
+}
+
+.dropdown-item:hover {
+    background-color: #d2ecbb;
+}
+
+.dropdown-item input {
+    width: 15px;
+    height: 15px;
+    margin-right: 0.5rem;
+    accent-color: var(--primary-color);
+}
