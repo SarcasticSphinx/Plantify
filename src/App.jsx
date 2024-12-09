@@ -13,6 +13,7 @@ function App() {
       <NavBar/>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/Plantify" element={<Home />} />
         <Route path="/guide" element={<Guide />} />
         <Route path="/cart" element={<Cart />} />
       </Routes>
