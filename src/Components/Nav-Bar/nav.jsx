@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "./navStyles.css";
 import UserGuide from "../../images/user-guide.png";
 import cart from "../../images/carts.png";
@@ -21,25 +21,25 @@ export default function NavBar() {
   return (
     <>
       <nav>
-        <a href="/">
+        <NavLink href="/">
           <div className="logo">Plantify</div>
-        </a>
+        </NavLink>
         <div className="nav-options">
           <ul>
             <li>
-              <NavLink to="/">
+              <NavLink to="/Plantify/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
                 <img src={home} alt="User Guide" />
                 Home
               </NavLink>
             </li>
             <li>
-              <NavLink to="/guide">
+              <NavLink to="/Plantify/guide" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
                 <img src={UserGuide} alt="User Guide" />
                 Guide
               </NavLink>
             </li>
             <li>
-              <NavLink to="/cart">
+              <NavLink to="/Plantify/cart" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
                 <img src={cart} alt="Cart" />
                 Cart
               </NavLink>

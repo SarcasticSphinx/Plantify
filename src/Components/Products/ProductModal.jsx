@@ -20,7 +20,9 @@ const ProductModal = ({ product, onClose }) => {
   if (!product) return null;
 
   function handleAddToCart() {
-    const existingItemIndex = cartItems.findIndex((item) => item.productName === product.name);
+    const existingItemIndex = cartItems.findIndex(
+      (item) => item.productName === product.name
+    );
 
     if (existingItemIndex !== -1) {
       // Update quantity if item already exists in cart
@@ -91,10 +93,12 @@ const ProductModal = ({ product, onClose }) => {
         <button onClick={handleAddToCart} className="modal-button">
           Add to cart
         </button>
-        <a href="/cart"><button className="modal-button">Order Now</button></a>
-        
+        <a href="/Plantify/cart">
+          <button className="modal-button">Order Now</button>
+        </a>
+
         {/* Display added to cart message */}
-        {cartItems.map((item) => 
+        {cartItems.map((item) =>
           item.productName === product.name ? (
             <p key={item.productName} className="added-to-cart">
               [added to cart {item.quantity}x]

@@ -6,7 +6,6 @@ import Controls from "../Components/filter and types/controls";
 import FilteredOption from "../Components/FilteredOptions/FilteredOption";
 import Products from "../Components/Products/Products.jsx";
 import Suggestions from "../Components/Suggestions/Suggestions.jsx";
-import Footer from "../Components/Footer/Footer";
 
 const Home = () => {
   return (

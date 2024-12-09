@@ -73,7 +73,7 @@ const Cart = () => {
           <img src={emptyCart} alt="Empty cart" />
           <h1>Your Cart is Empty</h1>
           <p>Looks like you haven't added anything to your cart yet</p>
-          <a href="/"><button>Continue Shopping</button></a>
+          <a href="/Plantify/"><button>Continue Shopping</button></a>
         </div>
       ) : (
         <div className="cart-container">
