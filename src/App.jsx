@@ -1,9 +1,9 @@
-import Controls from "./Components/filter and types/controls.jsx";
+import  {Routes, Route} from "react-router-dom";
 import NavBar from "./Components/Nav-Bar/nav.jsx";
-import Search from "./Components/Search-box/search.jsx";
-import FilteredOption from "./Components/FilteredOptions/FilteredOption.jsx";
-import Products from "./Components/Products/Products.jsx";
-import Suggestions from "./Components/Suggestions/Suggestions.jsx";
+
+import Home from "./Pages/Home.jsx";
+import Guide from "./Pages/Guide.jsx";
+import Cart from "./Pages/Cart.jsx";
 import Footer from "./Components/Footer/Footer.jsx";
 
 
@@ -11,11 +11,11 @@ function App() {
   return (
     <>
       <NavBar/>
-      <Search/>
-      <Controls/>
-      <FilteredOption/>
-      <Products/>
-      <Suggestions/>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/guide" element={<Guide />} />
+        <Route path="/cart" element={<Cart />} />
+      </Routes>
       <Footer/>
     </>
   );

@@ -4,6 +4,7 @@ import star from "../../images/star.png";
 import { products } from "./products.js";
 import { useEffect, useState } from "react";
 import ProductModal from './ProductModal'; // Import the modal component
+import convertToBDT from "../convertToBDT.js";
 
 export default function Products() {
     const [productModal, setProductModal] = useState(false);
@@ -35,7 +36,7 @@ export default function Products() {
                                     <p className="product-short-description">
                                         {product.description}
                                     </p>
-                                    <p className="product-price">{product.price}$ for one</p>
+                                    <p className="product-price">{convertToBDT(product.price)}৳ </p>
                                 </div>
 
                                 <div className="product-rating">

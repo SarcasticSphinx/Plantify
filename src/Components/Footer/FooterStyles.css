@@ -1,7 +1,4 @@
-:root{
-    --primary-color: #407B11;
-    --text-color: #000000;
-}
+
 .footer-container{
     padding: 2rem 15rem;
     background-color: #E0F1D1;
@@ -11,7 +8,7 @@
 
 .logo {
     font-family: "Days One", sans-serif;
-    font-size: 64px;
+    font-size: 50px;
     color: var(--primary-color);
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
@@ -43,9 +40,19 @@
 .our-info a{
     @apply text-[17px] text-gray-500;
 }
+.our-info a:hover{
+    color: black;
+}
+
 .social-media-links{
     width: 26px;
     height: 26px;
+    opacity: 60%;
+    transition: all 0.3s ease;
+}
+.social-media-links:hover{
+    opacity: 100%;
+
 }
 .horizontal-divider{
     width: 100%;

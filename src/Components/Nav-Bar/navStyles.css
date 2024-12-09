@@ -6,10 +6,19 @@
 * {
     font-family: 'Poppins', sans-serif;
 }
-nav{
-    @apply flex justify-between items-center;
-    padding: .2em 10rem;
-    background-color: #E5F7D6;
+nav {
+  @apply flex justify-between items-center;
+  padding: .2em 10rem;
+  background-color: #E5F7D6;
+  position: fixed; /* Fixed positioning */
+  top: 0; /* Stick to top */
+  left: 0; /* Align left */
+  right: 0; /* Align right */
+  z-index: 100; /* Higher z-index */
+}
+
+body {
+  padding-top: 100px; /* Adjust based on nav height */
 }
 .logo {
     font-family: "Days One", sans-serif;
@@ -28,12 +37,37 @@ nav{
         width: 100%;
     }
   .nav-options li a {
-    @apply flex justify-center items-center gap-2 hover:text-[var(--primary-color)];
+    @apply flex justify-center items-center gap-2;
     font-size: 20px;
     font-weight: 600;
     opacity: 60%;
     transition: all 0.3s;
     
+  }
+  .nav-options li a.active{
+    color: var(--primary-color);
+    opacity: 100%;
+  }
+  .nav-options li a.active::after{
+    width: 100%;
+  }
+  .nav-options li a{
+    transition: all 0.3s;
+    position: relative;
+  }
+  .nav-options li a::after{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 100%;
+    width: 0;
+    height: 3px;
+    border-radius: 5px;
+    background: var(--primary-color);
+    transition: width 0.3s;
+  }
+  .nav-options li a:hover::after{
+    width: 100%;
   }
   .nav-options li a[href*="signUp"] {
     @apply border-2 border-[var(--primary-color)] px-4 py-1 rounded-md hover:bg-[var(--primary-color)] hover:text-white;
@@ -48,6 +82,10 @@ img[src*="user-guide"] {
 img[src*="cart"] {
     width: 26px;
     height: 26px;
+}
+img[src*="home"] {
+  width: 20px;
+  height: 20px;
 }
 
 
@@ -126,7 +164,7 @@ img[src*="cart"] {
   scale: 1.05;
 }
 
-.log-in-btn, .sign-ip-btn {
+.log-in-btn, .sign-up-btn {
   background: var(--primary-color);
   width: 100%;
   padding: 0.75rem;
@@ -138,7 +176,7 @@ img[src*="cart"] {
   margin-bottom: 1rem;
   transition: all 0.3s;
 }
-.log-in-btn:hover, .sign-ip-btn:hover {
+.log-in-btn:hover, .sign-up-btn:hover {
   background: #2e5b0d;
 }
 .alternative-option{
