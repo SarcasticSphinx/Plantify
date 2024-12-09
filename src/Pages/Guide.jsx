@@ -80,13 +80,15 @@ const Guide = () => {
       </div>
       <div className="guide-content">
         <h2>Get Started Today</h2>
-        <p  className="embrace">
-          <span >Embrace the green lifestyle!</span><br />
+        <p className="embrace">
+          <span>Embrace the green lifestyle!</span>
+          <br />
           Explore Plantify and transform your home into a lush haven.
         </p>
-
       </div>
-      <a href="/Plantify/" className="shop-now-btn"  >Shop now!<button ></button></a>
+      <a href="/Plantify/" className="shop-now-btn">
+        <button> Shop now!</button>
+      </a>
     </div>
   );
 };

@@ -94,7 +94,7 @@ const ProductModal = ({ product, onClose }) => {
           Add to cart
         </button>
         <a href="/Plantify/cart">
-          <button className="modal-button">Order Now</button>
+          <button onClick={handleAddToCart} className="modal-button">Order Now</button>
         </a>
 
         {/* Display added to cart message */}
