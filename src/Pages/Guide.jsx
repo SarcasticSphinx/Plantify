@@ -1,5 +1,6 @@
 import React from "react";
 import "./GuideStyle.css";
+import { Link } from "react-router-dom";
 
 const Guide = () => {
   return (
@@ -85,7 +86,7 @@ const Guide = () => {
         </p>
 
       </div>
-      <a href="/" className="shop-now-btn"  >Shop now!<button ></button></a>
+      <a href="/Plantify/" className="shop-now-btn"  >Shop now!<button ></button></a>
     </div>
   );
 };
