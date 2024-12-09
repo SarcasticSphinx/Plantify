@@ -27,19 +27,29 @@ export default function NavBar() {
         <div className="nav-options">
           <ul>
             <li>
-              <NavLink to="/Plantify/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-                <img src={home} alt="User Guide" />
+              <NavLink
+                to="/Plantify/"
+                end
+                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+              >
+                <img src={home} alt="Home" />
                 Home
               </NavLink>
             </li>
             <li>
-              <NavLink to="/Plantify/guide" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+              <NavLink
+                to="/Plantify/guide"
+                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+              >
                 <img src={UserGuide} alt="User Guide" />
                 Guide
               </NavLink>
             </li>
             <li>
-              <NavLink to="/Plantify/cart" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+              <NavLink
+                to="/Plantify/cart"
+                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+              >
                 <img src={cart} alt="Cart" />
                 Cart
               </NavLink>
