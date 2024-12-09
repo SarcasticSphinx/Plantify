@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "./navStyles.css";
 import UserGuide from "../../images/user-guide.png";
 import cart from "../../images/carts.png";
@@ -21,13 +21,13 @@ export default function NavBar() {
   return (
     <>
       <nav>
-        <a href="/">
+        <NavLink href="/">
           <div className="logo">Plantify</div>
-        </a>
+        </NavLink>
         <div className="nav-options">
           <ul>
             <li>
-              <NavLink to="/">
+              <NavLink to="/Plantify/">
                 <img src={home} alt="User Guide" />
                 Home
               </NavLink>
